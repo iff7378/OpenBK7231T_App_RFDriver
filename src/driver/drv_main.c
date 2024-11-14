@@ -365,6 +365,13 @@ static driver_t g_drivers[] = {
 	//drvdetail:"requires":""}
 	{ "AHT2X",	AHT2X_Init,	AHT2X_OnEverySecond,	AHT2X_AppendInformationToHTTPIndexPage,	NULL,	AHT2X_StopDriver,	NULL,	false },
 #endif
+#if ENABLE_DRIVER_RF
+	//drvdetail:{"name":"RF",
+	//drvdetail:"title":"TODO",
+	//drvdetail:"descr":"RF Driver for Tuya SH4 RF module",
+	//drvdetail:"requires":""}
+	{ "AHT2X",	RF_Init,	RF_OnEverySecond,	RF_AppendInformationToHTTPIndexPage,	NULL,	RF_StopDriver,	NULL,	false },
+#endif
 #if ENABLE_DRIVER_DS1820
 	//drvdetail:{"name":"DS1820",
 	//drvdetail:"title":"TODO",
